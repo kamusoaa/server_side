@@ -12,9 +12,9 @@ router.get('/simple', function (req, res) {
     return res.json({"text":"Hello"});
 });
 
-router.post('simple', function (req, res) {
+router.post('/simple', function (req, res) {
     console.log(req.body);
-    return res.send("Hello ");
+    return res.json({"text":"hello"});
 });
 
 module.exports = router;
