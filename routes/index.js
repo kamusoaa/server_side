@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/simple', function (req, res) {
-    //return res.send("Express Working!");
     return res.json({"text":"Hello"});
 });
 
