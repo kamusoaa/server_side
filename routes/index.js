@@ -1,19 +1,48 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var Modem = require('../model/modem');
+
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 
-router.get('/simple', function (req, res) {
+router.get('/signaling', function (req, res) {
+    console.log(req.query);
     return res.json({"text":"Hello"});
 });
 
-router.post('/simple', function (req, res) {
+
+
+
+
+
+router.get('/modemreg', function (req, res){
+    console.log(req.query);
+    Modem.findOne({imei : req.query.imei}, function (err, data) {
+        if(err)
+            throw err;
+        else
+        {
+            if(!data)
+            {
+                var modem = new Modem();
+                modem.imei = req.query.imei;
+                modem.phoneNo = req.query.phone;
+                modem.save();
+                console.log("save");
+            }
+            else return;
+        }
+    });
+    return res.json({"res":"ok"});
+});
+
+router.post('/registry', function (req, res) {
     console.log(req.body);
-    return res.json({"text":"hello"});
+    return res.json({"text":"ok"});
 });
 
 module.exports = router;
