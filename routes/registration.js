@@ -4,19 +4,6 @@ var router = express.Router();
 var Modem = require('../model/modem');
 var User = require('../model/user');
 
-
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-
-router.get('/signaling', function (req, res) {
-    console.log(req.query);
-    return res.json({"text":"Hello"});
-});
-
-
-
 router.get('/modemreg', function (req, res){
     console.log(req.query);
     Modem.findOne({imei : req.query.imei}, function (err, data) {

@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var registration = require('./routes/registration');
+var queryHandlers = require('./routes/queryHandlers');
 
 var mongoose = require('mongoose');
 var dbConnect = require('./application/dbConfig');
@@ -27,20 +28,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/reg', registration);
+app.use('/q', queryHandlers);
 
 
-app.route('/book')
-    .get(function(req, res) {
-        res.send('Get a random book');
-    })
-    .post(function(req, res) {
-        console.log(req.body.name);
-        res.send("Hello " + req.body.name);
-    })
-    .put(function(req, res) {
-        res.send('Update the book');
-    });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
