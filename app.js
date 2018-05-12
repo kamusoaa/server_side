@@ -8,6 +8,10 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var mongoose = require('mongoose');
+var dbConnect = require('./application/dbConfig');
+mongoose.connect(dbConnect.uri);
+
 var app = express();
 
 // view engine setup
