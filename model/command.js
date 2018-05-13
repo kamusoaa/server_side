@@ -3,8 +3,10 @@ var mongoose = require('mongoose');
 
 module.exports = mongoose.model('cmd',{
 
-    username : {
+    command : {
+        username: String,
         imei : String,
-        cmd : String
+        cmd : String,
+        isCommandExecute : Boolean
     }
 });
