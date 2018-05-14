@@ -102,5 +102,23 @@ router.post('/sendCommand', function (req, res) {
 });
 
 
+router.get('/readModemResponse', function (req, res) {
+   Command.findOne({'command.imei':req.query.imei, 'command.isCommandExecute':true,
+   'command.isComplete':true}, function (err, data) {
+       if(err)
+           throw err;
+       if(data)
+       {
+           if (data.command.cmdresp == 'undefined')
+               return res.send({"cmd":"Произошла ошибка. Попробуйте позже"});
+           else
+               return res.send({"cmd":data.command.cmdresp});
+       }
+       else
+           return res.send({"cmd":"Запрос еще не обработан модемом"});
+   });
+});
+
+
 
 module.exports = router;
