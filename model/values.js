@@ -13,8 +13,7 @@ module.exports = mongoose.model('values', {
         motion2 : String,
         hall : String,
         prox: String,
-        sound : String,
-        cmdResp : String
+        sound : String
     }
 });
 

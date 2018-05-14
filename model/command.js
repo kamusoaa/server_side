@@ -7,6 +7,8 @@ module.exports = mongoose.model('cmd',{
         username: String,
         imei : String,
         cmd : String,
-        isCommandExecute : Boolean
+        cmdresp : String,
+        isCommandExecute : Boolean,
+        isComplete :Boolean
     }
 });
