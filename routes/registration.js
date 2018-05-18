@@ -64,4 +64,23 @@ router.post('/registration', function (req, res) {
     return response;
 });
 
+
+router.post('/login', function (req, res) {
+   var response;
+   console.log(req.body);
+   User.findOne({username : req.body.username, password : req.body.password}, function (err, data) {
+       if(err)
+           throw err;
+       else
+       {
+           if(data)
+               response = res.json({"code":"200","response":"Пользователь найден"});
+           else
+               response = res.json({"code":"404","response":"Пользователь не найден"})
+       }
+   })
+
+    return response
+});
+
 module.exports = router;
