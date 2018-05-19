@@ -9,55 +9,67 @@ var Values = require('../model/values');
 
 router.get('/modem', function (req,res) {
    console.log("New request from " + req.query.imei);
-   Modem.findOne({imei : req.query.imei, isAttached : true}, function (data) {
-       var values = new Values();
-       values.data.imei = req.query.imei;
-       values.data.motion1 = req.query.motion1;
-       values.data.motion2 = req.query.motion2;
-       values.data.hall = req.query.hall;
-       values.data.prox = req.query.prox;
-       values.data.sound = req.query.sound;
+   Modem.findOne({imei : req.query.imei, isAttached : true}, function (err,data) {
 
-       if(req.query.alarm == 1)
-       {
-           values.data.alarm.isAlarm = true;
-           values.data.alarm.sensor = req.query.sensor;
-       }
-       values.save();
-       console.log("Values was added");
 
-       if(req.query.cmd != 0)
+       if(err)
+           throw err
+       if(data)
        {
-           Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
-           'command.isComplete':false}, function (err,data) {
-               if(err)
-                   throw err;
-               if(data)
-               {
-                   data.command.isComplete = true;
-                   data.command.cmdresp = req.query.cmd;
-                   data.save();
-                   return res.send({'cmd':0});
-               }
-               else
-                   return res.send({'cmd':0});
-           });
+           var values = new Values();
+           values.data.imei = req.query.imei;
+           values.data.motion1 = req.query.motion1;
+           values.data.motion2 = req.query.motion2;
+           values.data.hall = req.query.hall;
+           values.data.prox = req.query.prox;
+           values.data.sound = req.query.sound;
+
+           if(req.query.alarm == 1)
+           {
+               values.data.alarm.isAlarm = true;
+               values.data.alarm.sensor = req.query.sensor;
+           }
+           values.save();
+           console.log("Values was added");
+
+           if(req.query.cmd != 0)
+           {
+               Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
+                   'command.isComplete':false}, function (err,data) {
+                   if(err)
+                       throw err;
+                   if(data)
+                   {
+                       data.command.isComplete = true;
+                       data.command.cmdresp = req.query.cmd;
+                       data.save();
+                       return res.send({'cmd':0});
+                   }
+                   else
+                       return res.send({'cmd':0});
+               });
+           }
+           else
+           {
+               Command.findOne({'command.imei':req.query.imei, 'command.isCommandExecute':false}, function (err,data) {
+                   if(err)
+                       throw err;
+                   if(data)
+                   {
+                       console.log(data);
+                       data.command.isCommandExecute = true;
+                       data.save();
+                       return res.send({'cmd':data.command.cmd});
+                   }
+                   else
+                       return res.send({'cmd':0});
+               });
+           }
+
        }
        else
        {
-           Command.findOne({'command.imei':req.query.imei, 'command.isCommandExecute':false}, function (err,data) {
-               if(err)
-                   throw err;
-               if(data)
-               {
-                   console.log(data);
-                   data.command.isCommandExecute = true;
-                   data.save();
-                   return res.send({'cmd':data.command.cmd});
-               }
-               else
-                   return res.send({'cmd':0});
-           });
+           console.log("Modem : " + req.imei +" is not attached")
        }
    });
 });
