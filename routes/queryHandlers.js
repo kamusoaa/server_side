@@ -69,7 +69,8 @@ router.get('/modem', function (req,res) {
        }
        else
        {
-           console.log("Modem : " + req.imei +" is not attached")
+           console.log("Modem : " + req.imei +" is not attached");
+           return res.json({'cmd':0})
        }
    });
 });
