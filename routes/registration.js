@@ -49,15 +49,15 @@ router.post('/registration', function (req, res) {
                    else
                    {
                        if(update)
-                           response = res.json({"response":"Пользователь успешно зарегистрирован"});
+                           response = res.json({"code":"200","response":"Пользователь успешно зарегистрирован"});
                        else
-                           response = res.json({"response":"Пользователь успешно зарегистрирован. Модем не найден"});
+                           response = res.json({"code":"200","response":"Пользователь успешно зарегистрирован. Модем не найден"});
                    }
                 });
             }
             else
             {
-                response = res.json({"response": "Данный пользователь уже существует"});
+                response = res.json({"code":"404","response": "Данный пользователь уже существует"});
             }
         }
     });

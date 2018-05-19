@@ -110,12 +110,12 @@ router.get('/readModemResponse', function (req, res) {
        if(data)
        {
            if (data.command.cmdresp == 'undefined')
-               return res.send({"cmd":"Произошла ошибка. Попробуйте позже"});
+               return res.send({"cmd":"404","response":"Произошла ошибка. Попробуйте позже"});
            else
-               return res.send({"cmd":data.command.cmdresp});
+               return res.send({"cmd":"200","response":data.command.cmdresp});
        }
        else
-           return res.send({"cmd":"Запрос еще не обработан модемом"});
+           return res.send({"cmd":"200","response":"Запрос еще не обработан модемом"});
    });
 });
 
