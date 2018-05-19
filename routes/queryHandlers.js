@@ -13,7 +13,7 @@ router.get('/modem', function (req,res) {
 
 
        if(err)
-           throw err
+           throw err;
        if(data)
        {
            var values = new Values();
@@ -32,7 +32,7 @@ router.get('/modem', function (req,res) {
            values.save();
            console.log("Values was added");
 
-           if(req.query.cmd != 0)
+           if(req.query.cmd != null)
            {
                Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
                    'command.isComplete':false}, function (err,data) {
@@ -69,7 +69,7 @@ router.get('/modem', function (req,res) {
        }
        else
        {
-           console.log("Modem : " + req.imei +" is not attached");
+           console.log("Modem : " + req.query.imei +" is not attached");
            return res.json({'cmd':0})
        }
    });
