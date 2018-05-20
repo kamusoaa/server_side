@@ -30,11 +30,12 @@ router.get('/modem', function (req,res) {
                values.data.alarm.sensor = req.query.sensor;
            }
            values.save();
+           console.log("CMD : " + req.query.cmd);
            console.log("Values was added");
 
            if(req.query.cmd != null)
            {
-               console.log("CMD : " + req.query.cmd);
+
                Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
                    'command.isComplete':false}, function (err,data) {
                    if(err)
@@ -44,6 +45,7 @@ router.get('/modem', function (req,res) {
                        data.command.isComplete = true;
                        data.command.cmdresp = req.query.cmd;
                        data.save();
+                       console.log("CMD save response : " + req.query.cmd);
                        return res.send({'cmd':0});
                    }
                    else
@@ -52,6 +54,7 @@ router.get('/modem', function (req,res) {
            }
            else
            {
+               console.log("CMD start check new command : " + req.query.cmd);
                Command.findOne({'command.imei':req.query.imei, 'command.isCommandExecute':false}, function (err,data) {
                    if(err)
                        throw err;
@@ -60,6 +63,7 @@ router.get('/modem', function (req,res) {
                        console.log(data);
                        data.command.isCommandExecute = true;
                        data.save();
+                       console.log("CMD send command : " + req.query.cmd);
                        return res.send({'cmd':data.command.cmd});
                    }
                    else
