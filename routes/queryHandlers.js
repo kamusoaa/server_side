@@ -33,7 +33,7 @@ router.get('/modem', function (req,res) {
            console.log("CMD : " + req.query.cmd);
            console.log("Values was added");
 
-           if(req.query.cmd != null)
+           if(req.query.cmd != 0)
            {
 
                Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
