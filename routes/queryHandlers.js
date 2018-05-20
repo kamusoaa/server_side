@@ -11,7 +11,6 @@ router.get('/modem', function (req,res) {
    console.log("New request from " + req.query.imei);
    Modem.findOne({imei : req.query.imei, isAttached : true}, function (err,data) {
 
-
        if(err)
            throw err;
        if(data)
@@ -33,9 +32,12 @@ router.get('/modem', function (req,res) {
            console.log("CMD : " + req.query.cmd);
            console.log("Values was added");
 
+
+
+
            if(req.query.cmd != 0)
            {
-
+               console.log("TRUE : FALSE");
                Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
                    'command.isComplete':false}, function (err,data) {
                    if(err)
@@ -46,12 +48,20 @@ router.get('/modem', function (req,res) {
                        data.command.cmdresp = req.query.cmd;
                        data.save();
                        console.log("CMD save response : " + req.query.cmd);
+                       console.log("END HERE 1");
                        return res.json({'cmd':0});
                    }
                    else
+                   {
+                       console.log("END HERE 2");
                        return res.json({'cmd':0});
+                   }
+
                });
            }
+
+
+
            else
            {
                console.log("CMD start check new command : " + req.query.cmd);
@@ -64,17 +74,26 @@ router.get('/modem', function (req,res) {
                        data.command.isCommandExecute = true;
                        data.save();
                        console.log("CMD send command : " + data.command.cmd);
+                       console.log("END HERE 3");
                        return res.json({'cmd':data.command.cmd});
                    }
                    else
+                   {
+                       console.log("END HERE 4");
                        return res.json({'cmd':0});
+
+                   }
                });
            }
 
        }
+
+
+
        else
        {
            console.log("Modem : " + req.query.imei +" is not attached");
+           console.log("END HERE 5");
            return res.json({'cmd':0})
        }
    });
