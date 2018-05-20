@@ -46,10 +46,10 @@ router.get('/modem', function (req,res) {
                        data.command.cmdresp = req.query.cmd;
                        data.save();
                        console.log("CMD save response : " + req.query.cmd);
-                       return res.send({'cmd':0});
+                       return res.json({'cmd':0});
                    }
                    else
-                       return res.send({'cmd':0});
+                       return res.json({'cmd':0});
                });
            }
            else
@@ -63,11 +63,11 @@ router.get('/modem', function (req,res) {
                        console.log(data);
                        data.command.isCommandExecute = true;
                        data.save();
-                       console.log("CMD send command : " + req.query.cmd);
-                       return res.send({'cmd':data.command.cmd});
+                       console.log("CMD send command : " + data.command.cmd);
+                       return res.json({'cmd':data.command.cmd});
                    }
                    else
-                       return res.send({'cmd':0});
+                       return res.json({'cmd':0});
                });
            }
 
