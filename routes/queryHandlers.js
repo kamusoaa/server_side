@@ -34,6 +34,7 @@ router.get('/modem', function (req,res) {
 
            if(req.query.cmd != null)
            {
+               console.log("CMD : " + req.query.cmd);
                Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
                    'command.isComplete':false}, function (err,data) {
                    if(err)
