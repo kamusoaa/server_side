@@ -120,7 +120,8 @@ router.post('/sendCommand', function (req, res) {
          }
          else
          {
-             Command.updateOne({'command.username':req.body.username, 'command.imei':req.body.imei}, {'command.cmd' : req.body.cmd}, function (err, update) {
+             Command.updateOne({'command.username':req.body.username, 'command.imei':req.body.imei}, {'command.cmd' : req.body.cmd,
+         		'command.isComplete' : false, 'command.isCommandExecute' : false}, function (err, update) {
                  if(err)
                      throw err;
                  else
