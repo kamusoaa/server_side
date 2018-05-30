@@ -9,29 +9,54 @@ var Values = require('../model/values');
 
 router.get('/modem', function (req,res) {
    console.log("New request from " + req.query.imei);
+   console.log("Type " + req.query.alarm)
    Modem.findOne({imei : req.query.imei, isAttached : true}, function (err,data) {
 
        if(err)
            throw err;
        if(data)
        {
-           var values = new Values();
-           values.data.imei = req.query.imei;
-           values.data.motion1 = req.query.motion1;
-           values.data.motion2 = req.query.motion2;
-           values.data.hall = req.query.hall;
-           values.data.prox = req.query.prox;
-           values.data.sound = req.query.sound;
+           Values.findOne({}, function (err,data) {
+               if(err)
+                   throw err;
+               if(!data)
+               {
+                   console.log("!DATA");
+                   var values = new Values();
+                   values.data.imei = req.query.imei;
+                   values.data.motion1 = req.query.motion1;
+                   values.data.motion2 = req.query.motion2;
+                   values.data.hall = req.query.hall;
+                   values.data.prox = req.query.prox;
+                   values.data.sound = req.query.sound;
 
-           if(req.query.alarm == 1)
-           {
-               values.data.alarm.isAlarm = true;
-               values.data.alarm.sensor = req.query.sensor;
-           }
-           values.save();
-           console.log("CMD : " + req.query.cmd);
-           console.log("Values was added");
+                   if(req.query.alarm == 1)
+                   {
+                       values.data.alarm.isAlarm = true;
+                       values.data.alarm.sensor = req.query.sensor;
+                   }
+                   else
+                   {
+                       values.data.alarm.isAlarm = false;
+                       values.data.alarm.sensor = null;
+                   }
+                   values.save();
 
+               }
+               else
+               {
+                   Values.updateOne({'data.imei':req.query.imei}, {'data.alarm.isAlarm' : req.query.alarm,
+                   'data.alarm.sensor': req.query.sensor,
+                   'data.motion1':req.query.motion1,
+                       'data.motion2':req.query.motion2,
+                       'data.hall':req.query.hall,
+                       'data.prox':req.query.prox,
+                       'data.sound':req.query.sound}, function (err, update) {
+                   });
+               }
+               console.log("CMD : " + req.query.cmd);
+               console.log("Values was added");
+           });
 
 
 
@@ -59,9 +84,6 @@ router.get('/modem', function (req,res) {
 
                });
            }
-
-
-
            else
            {
                console.log("CMD start check new command : " + req.query.cmd);
@@ -120,6 +142,7 @@ router.post('/sendCommand', function (req, res) {
          }
          else
          {
+
              Command.updateOne({'command.username':req.body.username, 'command.imei':req.body.imei}, {'command.cmd' : req.body.cmd}, function (err, update) {
                  if(err)
                      throw err;
@@ -140,14 +163,16 @@ router.post('/sendCommand', function (req, res) {
 
 
 router.get('/readModemResponse', function (req, res) {
-   Command.findOne({'command.imei':req.query.imei, 'command.isCommandExecute':true,
+   Command.findOne({'command.imei':req.query.imei, 'command.isCommandExecute':
+           true,
    'command.isComplete':true}, function (err, data) {
        if(err)
            throw err;
        if(data)
        {
            if (data.command.cmdresp == 'undefined')
-               return res.send({"cmd":"404","response":"Произошла ошибка. Попробуйте позже"});
+               return res.send({"cmd":"404","response":"Произошла ошибка. " +
+                   "Попробуйте позже"});
            else
                return res.send({"cmd":"200","response":data.command.cmdresp});
        }
@@ -155,7 +180,5 @@ router.get('/readModemResponse', function (req, res) {
            return res.send({"cmd":"200","response":"Запрос еще не обработан модемом"});
    });
 });
-
-
 
 module.exports = router;
