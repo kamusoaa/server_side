@@ -53,7 +53,11 @@
       </file>
       <file leaf-file-name="queryHandlers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
@@ -248,15 +252,15 @@
       <workItem from="1526756305542" duration="3200000" />
       <workItem from="1526821358282" duration="5180000" />
       <workItem from="1527557602926" duration="2438000" />
-      <workItem from="1527696897316" duration="4552000" />
+      <workItem from="1527696897316" duration="4604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40845000" />
+    <option name="totallyTimeSpent" value="40897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="670" y="143" width="864" height="800" extended-state="0" />
+    <frame x="798" y="150" width="864" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -648,7 +652,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
