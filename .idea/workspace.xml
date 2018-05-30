@@ -35,8 +35,8 @@
       <file leaf-file-name="queryHandlers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="179" column="39" selection-start-line="179" selection-start-column="39" selection-end-line="179" selection-end-column="39" />
+            <state relative-caret-position="319">
+              <caret line="179" column="34" selection-start-line="179" selection-start-column="34" selection-end-line="179" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -111,8 +111,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="954" />
-    <option name="y" value="193" />
+    <option name="x" value="742" />
+    <option name="y" value="222" />
     <option name="width" value="1083" />
     <option name="height" value="800" />
   </component>
@@ -233,15 +233,15 @@
       <workItem from="1526756305542" duration="3200000" />
       <workItem from="1526821358282" duration="5180000" />
       <workItem from="1527557602926" duration="2438000" />
-      <workItem from="1527696897316" duration="5354000" />
+      <workItem from="1527696897316" duration="5986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41647000" />
+    <option name="totallyTimeSpent" value="42279000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="777" y="198" width="1083" height="800" extended-state="0" />
+    <frame x="742" y="222" width="1083" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -634,8 +634,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="179" column="39" selection-start-line="179" selection-start-column="39" selection-end-line="179" selection-end-column="39" />
+        <state relative-caret-position="319">
+          <caret line="179" column="34" selection-start-line="179" selection-start-column="34" selection-end-line="179" selection-end-column="34" />
         </state>
       </provider>
     </entry>

@@ -171,13 +171,13 @@ router.get('/readModemResponse', function (req, res) {
         if(data)
         {
             if (data.command.cmdresp == 'undefined')
-                return res.send({"cmd":"404","response":"Произошла ошибка. " +
+                return res.send({"code":"404","response":"Произошла ошибка. " +
                     "Попробуйте позже"});
             else
-                return res.send({"cmd":"200","response":data.command.cmdresp});
+                return res.send({"code":"200","response":data.command.cmdresp});
         }
         else
-            return res.send({"cmd":"201","response":"Запрос еще не обработан модемом"});
+            return res.send({"code":"201","response":"Запрос еще не обработан модемом"});
     });
 });
 
