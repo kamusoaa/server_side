@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8b704f-98ae-4117-be13-3e07b7656607" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/queryHandlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/queryHandlers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/dbConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/dbConfig.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dbConfig.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbConfig.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/dbConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="queryHandlers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="queryHandlers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+            <state relative-caret-position="1496">
+              <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -113,8 +113,8 @@
         <option value="$PROJECT_DIR$/model/command.js" />
         <option value="$PROJECT_DIR$/model/values.js" />
         <option value="$PROJECT_DIR$/routes/registration.js" />
-        <option value="$PROJECT_DIR$/application/dbConfig.js" />
         <option value="$PROJECT_DIR$/routes/queryHandlers.js" />
+        <option value="$PROJECT_DIR$/application/dbConfig.js" />
       </list>
     </option>
   </component>
@@ -130,8 +130,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="798" />
-    <option name="y" value="150" />
+    <option name="x" value="230" />
+    <option name="y" value="127" />
     <option name="width" value="864" />
     <option name="height" value="800" />
   </component>
@@ -252,15 +252,15 @@
       <workItem from="1526756305542" duration="3200000" />
       <workItem from="1526821358282" duration="5180000" />
       <workItem from="1527557602926" duration="2438000" />
-      <workItem from="1527696897316" duration="4604000" />
+      <workItem from="1527696897316" duration="4679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40897000" />
+    <option name="totallyTimeSpent" value="40972000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="798" y="150" width="864" height="800" extended-state="0" />
+    <frame x="230" y="127" width="864" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -644,17 +644,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/dbConfig.js">
+    <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        <state relative-caret-position="1496">
+          <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
+    <entry file="file://$PROJECT_DIR$/application/dbConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
