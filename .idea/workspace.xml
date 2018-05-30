@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8b704f-98ae-4117-be13-3e07b7656607" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/dbConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/dbConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/queryHandlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/queryHandlers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,11 +53,7 @@
       </file>
       <file leaf-file-name="queryHandlers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
@@ -132,8 +126,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="670" />
-    <option name="y" value="143" />
+    <option name="x" value="798" />
+    <option name="y" value="150" />
     <option name="width" value="864" />
     <option name="height" value="800" />
   </component>
@@ -254,15 +248,15 @@
       <workItem from="1526756305542" duration="3200000" />
       <workItem from="1526821358282" duration="5180000" />
       <workItem from="1527557602926" duration="2438000" />
-      <workItem from="1527696897316" duration="4431000" />
+      <workItem from="1527696897316" duration="4552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40724000" />
+    <option name="totallyTimeSpent" value="40845000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1057" extended-state="0" />
+    <frame x="670" y="143" width="864" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -274,12 +268,12 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23783784" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32934132" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23799582" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2688679" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -654,11 +648,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
