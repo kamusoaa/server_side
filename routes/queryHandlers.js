@@ -177,7 +177,7 @@ router.get('/readModemResponse', function (req, res) {
                 return res.send({"cmd":"200","response":data.command.cmdresp});
         }
         else
-            return res.send({"cmd":"200","response":"Запрос еще не обработан модемом"});
+            return res.send({"cmd":"201","response":"Запрос еще не обработан модемом"});
     });
 });
 
