@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8b704f-98ae-4117-be13-3e07b7656607" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/dbConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/dbConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/queryHandlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/queryHandlers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="queryHandlers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="145" column="94" selection-start-line="145" selection-start-column="94" selection-end-line="145" selection-end-column="94" />
+            <state relative-caret-position="237">
+              <caret line="194" column="56" selection-start-line="194" selection-start-column="56" selection-end-line="194" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -112,9 +110,8 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="742" />
-    <option name="y" value="222" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="417" />
     <option name="width" value="1083" />
     <option name="height" value="800" />
   </component>
@@ -231,15 +228,15 @@
       <workItem from="1526821358282" duration="5180000" />
       <workItem from="1527557602926" duration="2438000" />
       <workItem from="1527696897316" duration="5986000" />
-      <workItem from="1528203727059" duration="1055000" />
+      <workItem from="1528203727059" duration="2840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43334000" />
+    <option name="totallyTimeSpent" value="45119000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <frame x="0" y="417" width="1083" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -250,13 +247,13 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32930845" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4497751" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1203125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2132964" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -632,8 +629,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/queryHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="145" column="94" selection-start-line="145" selection-start-column="94" selection-end-line="145" selection-end-column="94" />
+        <state relative-caret-position="237">
+          <caret line="194" column="56" selection-start-line="194" selection-start-column="56" selection-end-line="194" selection-end-column="56" />
         </state>
       </provider>
     </entry>

@@ -181,4 +181,20 @@ router.get('/readModemResponse', function (req, res) {
     });
 });
 
+
+router.get('/getAlarmStatus', function (req, res) {
+    Values.findOne({'data.alarm.isAlarm' : true}, function (err, data) {
+        if(err)
+            throw err;
+        if(data)
+        {
+            res.send({"code":200, "response" : data.alarm.isAlarm});
+        }
+        else
+        {
+            res.send({"code":201, "response" : "Все спокойно"});
+        }
+    })
+});
+
 module.exports = router;
