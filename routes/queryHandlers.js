@@ -62,7 +62,6 @@ router.get('/modem', function (req,res) {
 
             if(req.query.cmd != 0)
             {
-                console.log("TRUE : FALSE");
                 Command.findOne({'command.imei':req.query.imei,'command.isCommandExecute':true,
                     'command.isComplete':false}, function (err,data) {
                     if(err)
@@ -143,7 +142,8 @@ router.post('/sendCommand', function (req, res) {
             else
             {
 
-                Command.updateOne({'command.username':req.body.username, 'command.imei':req.body.imei}, {'command.cmd' : req.body.cmd}, function (err, update) {
+                Command.updateOne({'command.username':req.body.username, 'command.imei':req.body.imei}, {'command.cmd' : req.body.cmd,
+                'command.isCommandExecute' : false, 'command.isComplete': false, 'command.cmdresp' : 'null'}, function (err, update) {
                     if(err)
                         throw err;
                     else
@@ -151,7 +151,7 @@ router.post('/sendCommand', function (req, res) {
                         if(update)
                             response = res.json({"cmd":"ok"});
                         else
-                            esponse = res.json({"cmd":"not ok"});
+                            response = res.json({"cmd":"not ok"});
                     }
                 })
             }
