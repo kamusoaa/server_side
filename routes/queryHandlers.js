@@ -188,7 +188,7 @@ router.get('/getAlarmStatus', function (req, res) {
             throw err;
         if(data)
         {
-            res.send({"code":200, "response" : data.alarm.isAlarm});
+            res.send({"code":200, "response" : data.data.alarm.sensor});
         }
         else
         {
